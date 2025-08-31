@@ -1,0 +1,291 @@
+.posts-view-root {
+    -fx-background-color: transparent;
+}
+
+.top-container {
+    -fx-padding: 0 0 10 0;
+}
+
+.top-controls-bar {
+    -fx-spacing: 10px;
+}
+
+.add-filter-button {
+    -fx-background-color: transparent;
+    -fx-background-radius: 15px;
+    -fx-border-color: #4A4A6A;
+    -fx-border-radius: 15px;
+    -fx-min-height: 28px;
+    -fx-max-height: 28px;
+    -fx-alignment: center;
+    -fx-cursor: hand;
+    -fx-padding: 5 8;
+}
+.add-filter-button:hover .plus-symbol { -fx-text-fill: #dcdada; }
+.add-filter-button:disabled {
+    -fx-opacity: 0.5;
+    -fx-cursor: default;
+}
+.add-filter-button:disabled:hover .plus-symbol { -fx-text-fill: #646283; }
+.plus-symbol {
+    -fx-text-fill: #646283;
+    -fx-font-family: "Inter Bold";
+    -fx-font-size: 16px;
+}
+.filter-button-text-label {
+    -fx-font-size: 13px;
+    -fx-font-family: "Inter";
+    -fx-text-fill: #646283;
+}
+
+.builder-chip {
+    -fx-background-color: #2b2c4b;
+    -fx-padding: 0 8;
+    -fx-alignment: center;
+    -fx-border-width: 0;
+    -fx-min-height: 28px;
+    -fx-max-height: 28px;
+    -fx-pref-height: 28px;
+}
+.builder-chip .label {
+    -fx-text-fill: #b3b3b5;
+    -fx-font-family: "Inter Medium";
+    -fx-font-size: 12px;
+}
+.builder-chip-left {
+    -fx-background-radius: 14px 0 0 14px;
+}
+.builder-chip-right {
+    -fx-background-radius: 0 14px 14px 0;
+    -fx-padding: 0 6 0 8;
+}
+.filter-combo-box {
+    -fx-background-color: #2b2c4b;
+    -fx-background-radius: 0 14px 14px 0;
+    -fx-min-height: 28px;
+    -fx-pref-height: 28px;
+    -fx-max-height: 28px;
+    -fx-padding: 0 8 0 8;
+    -fx-border-width: 0;
+    -fx-border-color: transparent;
+    -fx-focus-color: transparent;
+    -fx-faint-focus-color: transparent;
+}
+.filter-combo-box:focused {
+    -fx-border-color: transparent;
+    -fx-background-color: #2b2c4b;
+}
+.filter-combo-box-initial {
+    -fx-background-radius: 14px 0 0 14px;
+}
+.filter-combo-box .list-cell {
+    -fx-background-color: #2b2c4b;
+    -fx-text-fill: #ffffff;
+    -fx-font-family: "Inter";
+    -fx-font-size: 12px;
+}
+.filter-combo-box .list-cell:hover {
+    -fx-background-color: #56448e;
+}
+.combo-box-popup .list-view {
+    -fx-background-color: #2b2c4b;
+    -fx-border-color: #1f1f27;
+}
+.filter-combo-box .arrow {
+    -fx-background-color: #8d8aab;
+}
+
+.filter-label {
+    -fx-text-fill: #b3b3b5;
+    -fx-font-family: "Inter Medium";
+    -fx-font-size: 12px;
+    -fx-padding: 0;
+}
+
+.filter-chip-close-button-inside {
+    -fx-background-color: transparent;
+    -fx-padding: 1px;
+    -fx-cursor: hand;
+    -fx-background-radius: 6px;
+    -fx-min-width: 14px;
+    -fx-min-height: 14px;
+    -fx-max-width: 14px;
+    -fx-max-height: 14px;
+}
+.filter-chip-close-button-inside:hover {
+    -fx-background-color: rgba(255, 255, 255, 0.1);
+}
+
+.right-action-button {
+    -fx-background-radius: 4px;
+    -fx-min-width: 38px;
+    -fx-min-height: 38px;
+    -fx-max-width: 38px;
+    -fx-max-height: 38px;
+}
+.right-action-button:hover {
+    -fx-background-color: #56448e;
+}
+.right-action-button:hover .styled-button-svg {
+    -fx-fill: #ffffff;
+}
+.search-field {
+    -fx-background-color: #2b2c4b;
+    -fx-text-fill: #ffffff;
+    -fx-prompt-text-fill: #716996;
+    -fx-border-color: transparent;
+    -fx-border-radius: 4px;
+    -fx-font-family: "Inter";
+    -fx-font-size: 13px;
+    -fx-min-height: 38px;
+    -fx-pref-width: 220px;
+    -fx-focus-color: transparent;
+    -fx-faint-focus-color: transparent;
+}
+
+.posts-table-view {
+    -fx-background-color: transparent;
+    -fx-border-width: 0;
+    -fx-table-cell-border-color: transparent;
+    -fx-selection-bar-non-focused: transparent;
+    -fx-selection-bar: transparent;
+    -fx-focus-color: transparent;
+    -fx-faint-focus-color: transparent;
+}
+
+.posts-table-view .column-header-background {
+    -fx-background-color: #1f1f27;
+    -fx-border-width: 0 0 0 0;
+    -fx-border-color: #56448e;
+}
+
+.posts-table-view .column-header-background .nested-column-header {
+    -fx-border-width: 0;
+    -fx-background-color: transparent;
+}
+
+.posts-table-view .column-header-background .nested-column-header .column-header {
+    -fx-border-width: 0;
+}
+
+.posts-table-view .nested-column-header {
+    -fx-border-width: 0;
+}
+
+.posts-table-view .column-header {
+    -fx-border-width: 0;
+    -fx-background-color: transparent;
+    -fx-cursor: default;
+    -fx-background-radius: 0;
+}
+
+.posts-table-view .column-header .label {
+    -fx-text-fill: #ffffff;
+    -fx-font-family: "Inter SemiBold";
+    -fx-font-size: 12px;
+    -fx-padding: 15px;
+    -fx-alignment: center-left;
+}
+
+.posts-table-view .column-header.date-column {
+    -fx-cursor: hand;
+}
+
+.posts-table-view .column-header.date-column .label {
+    -fx-text-fill: #56448e;
+}
+
+.posts-table-view .table-row-cell {
+    -fx-background-color: #2b2c4b;
+    -fx-border-color: #19191d;
+    -fx-border-width: 0 0 6px 0;
+    -fx-padding: 0;
+}
+
+.posts-table-view .table-row-cell:hover {
+    -fx-background-color: #2b2c4b;
+}
+
+.posts-table-view .table-row-cell:selected {
+    -fx-background-color: #2b2c4b;
+}
+
+.posts-table-view .table-row-cell:empty {
+    -fx-background-color: transparent;
+    -fx-border-width: 0;
+    -fx-min-height: 35px;
+    -fx-pref-height: 35px;
+    -fx-max-height: 35px;
+}
+
+.posts-table-view .table-row-cell:empty .table-cell {
+    -fx-background-color: transparent;
+    -fx-border-width: 0;
+}
+
+.posts-table-view .table-cell {
+    -fx-text-fill: #ffffff;
+    -fx-font-family: "Inter";
+    -fx-font-size: 14px;
+    -fx-background-color: #2b2c4b;
+    -fx-border-color: #1f1f27;
+    -fx-border-width: 0px 0;
+    -fx-padding: 0 0 0 15px;
+    -fx-alignment: center-left;
+}
+
+.posts-table-view .scroll-bar:horizontal {
+    -fx-opacity: 0;
+    -fx-pref-height: 0;
+}
+
+.posts-table-view .scroll-bar:vertical {
+    -fx-opacity: 0;
+    -fx-pref-width: 0;
+}
+
+.posts-table-view .corner {
+    -fx-opacity: 0;
+}
+.date-column .column-header .arrow {
+    -fx-alignment: center-left;
+    -fx-translate-x: 0;
+}
+
+.platform-icon {
+    -fx-fill: #b3b3b5;
+    -fx-scale-x: 0.7;
+    -fx-scale-y: 0.7;
+}
+
+.status-done, .status-in-progress, .status-canceled {
+    -fx-background-radius: 15;
+    -fx-padding: 5 10;
+    -fx-font-family: "Inter Medium";
+}
+.status-done {
+    -fx-text-fill: #1ED760;
+    -fx-background-color: rgba(30, 215, 96, 0.1);
+}
+.status-in-progress {
+    -fx-text-fill: #FBC02D;
+    -fx-background-color: rgba(251, 192, 45, 0.1);
+}
+.status-canceled {
+    -fx-text-fill: #FF6B6B;
+    -fx-background-color: rgba(255, 107, 107, 0.1);
+}
+
+.editTask-button, .deleteTask-button {
+    -fx-background-color: transparent;
+    -fx-cursor: hand;
+    -fx-padding: 4px;
+    -fx-background-radius: 4px;
+    -fx-width: 24px;
+    -fx-height: 24px;
+    -fx-min-width: 24px;
+    -fx-min-height: 24px;
+    -fx-max-width: 24px;
+    -fx-max-height: 24px;
+}
+

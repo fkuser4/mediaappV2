@@ -1,0 +1,96 @@
+.delete-modal {
+    -fx-background-color: #1f1f27;
+    -fx-border-radius: 8px;
+    -fx-background-radius: 8px;
+    -fx-min-width: 500px;
+    -fx-max-width: 500px;
+    -fx-pref-width: 500px;
+    -fx-padding: 0;
+    -fx-alignment: center;
+    -fx-min-height: 300px;
+    -fx-max-height: 300px;
+    -fx-pref-height: 300px;
+}
+
+.delete-modal-header {
+    -fx-padding: 24 24 16 24;
+    -fx-alignment: center;
+}
+
+.delete-modal-title {
+    -fx-font-family: "Inter Bold";
+    -fx-font-size: 18px;
+    -fx-text-fill: #f2f3f5;
+    -fx-alignment: center;
+}
+
+.delete-modal-content {
+    -fx-padding: 0 24 24 24;
+    -fx-spacing: 20;
+    -fx-alignment: center;
+}
+
+.delete-modal-message {
+    -fx-font-family: "Inter Regular";
+    -fx-font-size: 15px;
+    -fx-text-fill: #b5bac1;
+    -fx-text-alignment: center;
+    -fx-alignment: center;
+    -fx-wrap-text: true;
+}
+
+.delete-post-title {
+    -fx-font-family: "Inter SemiBold";
+    -fx-font-size: 14px;
+    -fx-text-fill: #dbdee1;
+    -fx-text-alignment: center;
+    -fx-alignment: center;
+    -fx-wrap-text: true;
+    -fx-padding: 8 16;
+    -fx-background-color: #19191d;
+    -fx-background-radius: 6px;
+    -fx-max-width: 320px;
+}
+
+.delete-modal-footer {
+    -fx-padding: 16 24 24 24;
+    -fx-spacing: 12;
+    -fx-alignment: center;
+}
+
+.delete-cancel-button {
+    -fx-background-color: #35373c;
+    -fx-text-fill: #dbdee1;
+    -fx-font-family: "Inter Medium";
+    -fx-font-size: 14px;
+    -fx-padding: 10 24;
+    -fx-background-radius: 4px;
+    -fx-cursor: hand;
+    -fx-border-color: transparent;
+    -fx-min-width: 80px;
+}
+
+.delete-cancel-button:hover {
+    -fx-background-color: #40444b;
+}
+
+.delete-confirm-button {
+    -fx-background-color: #f04747;
+    -fx-text-fill: white;
+    -fx-font-family: "Inter Bold";
+    -fx-font-size: 14px;
+    -fx-padding: 10 24;
+    -fx-background-radius: 4px;
+    -fx-cursor: hand;
+    -fx-border-color: transparent;
+    -fx-min-width: 80px;
+}
+
+.delete-confirm-button:hover {
+    -fx-background-color: #e03e3e;
+}
+
+.delete-confirm-button:disabled {
+    -fx-opacity: 0.5;
+    -fx-cursor: default;
+}

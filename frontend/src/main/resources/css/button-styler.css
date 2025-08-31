@@ -1,0 +1,29 @@
+.custom-styled-button {
+    -fx-background-radius: 8px;
+    -fx-border-radius: 8px;
+    -fx-padding: 8px;
+    -fx-cursor: hand;
+
+    -fx-background-color: -fx-normal-bg-color;
+}
+
+.custom-styled-button .styled-button-svg {
+
+    -fx-fill: -fx-normal-svg-color;
+}
+
+.custom-styled-button:hover {
+    -fx-background-color: -fx-hover-bg-color;
+}
+
+.custom-styled-button:hover .styled-button-svg {
+    -fx-fill: -fx-hover-svg-color;
+}
+
+.custom-styled-button.selected {
+    -fx-background-color: -fx-selected-bg-color;
+}
+
+.custom-styled-button.selected .styled-button-svg {
+    -fx-fill: -fx-selected-svg-color;
+}

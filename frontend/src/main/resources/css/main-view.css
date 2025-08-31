@@ -1,0 +1,42 @@
+.main-view-root,
+.content-area,
+.content-container {
+    -fx-background-color: #19191d;
+}
+
+.nav-bar {
+    -fx-background-color: #1f1f27;
+    -fx-alignment: top-center;
+    -fx-spacing: 10;
+    -fx-padding: 0 10 10 10;
+    -fx-min-width: 80;
+    -fx-max-width: 80;
+}
+
+.nav-button {
+    -fx-pref-width: 40px;
+    -fx-pref-height: 40px;
+    -fx-min-width: 40px;
+    -fx-min-height: 40px;
+    -fx-max-width: 40px;
+    -fx-max-height: 40px;
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+    -fx-background-radius: 4px;
+}
+
+.version-label {
+    -fx-text-fill: #b3b3b5;
+    -fx-font-size: 10px;
+    -fx-alignment: center;
+}
+
+.content-title {
+    -fx-text-fill: #ffffff;
+    -fx-font-size: 26px;
+    -fx-font-weight: bold;
+    -fx-font-family: "Inter";
+    -fx-padding: 0 0 10 0;
+    -fx-min-width: 300px;
+    -fx-font-smoothing-type: gray;
+}

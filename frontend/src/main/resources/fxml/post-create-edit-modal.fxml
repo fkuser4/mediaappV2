@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane styleClass="modal-overlay" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+    <VBox styleClass="create-edit-modal" AnchorPane.bottomAnchor="100.0" AnchorPane.leftAnchor="250.0"
+          AnchorPane.rightAnchor="250.0" AnchorPane.topAnchor="100.0">
+        <HBox alignment="CENTER_LEFT" styleClass="modal-header">
+            <Label fx:id="modalTitleLabel" styleClass="modal-title" text="Create New Post"/>
+            <Region HBox.hgrow="ALWAYS"/>
+            <Button fx:id="closeButton" onAction="#handleClose" styleClass="modal-close-button" mnemonicParsing="false"/>
+        </HBox>
+        <ScrollPane fx:id="contentScrollPane" styleClass="modal-content-scroll" fitToWidth="true" VBox.vgrow="ALWAYS">
+            <VBox fx:id="modalContent" styleClass="modal-content">
+                <VBox styleClass="field-container">
+                    <Label styleClass="field-label" text="Post Title"/>
+                    <TextField fx:id="titleField" styleClass="field-input" promptText="Enter your post title..."/>
+                    <Label fx:id="titleErrorLabel" styleClass="error-message" managed="false" visible="false"/>
+                </VBox>
+                <VBox styleClass="field-container">
+                    <Label styleClass="field-label" text="Content"/>
+                    <TextArea fx:id="contentArea" styleClass="content-area" promptText="What's on your mind?"
+                              wrapText="true"/>
+                    <Label fx:id="contentErrorLabel" styleClass="error-message" managed="false" visible="false"/>
+                </VBox>
+                <VBox styleClass="field-container">
+                    <Label styleClass="field-label" text="Publish Date"/>
+                    <TextField fx:id="dateField" styleClass="date-input"/>
+                    <Label fx:id="dateErrorLabel" styleClass="error-message" managed="false" visible="false"/>
+                </VBox>
+                <VBox styleClass="field-container">
+                    <Label styleClass="field-label" text="Platforms"/>
+                    <FlowPane fx:id="platformContainer" styleClass="platform-container"/>
+                    <Label fx:id="platformsErrorLabel" styleClass="error-message" managed="false" visible="false"/>
+                </VBox>
+                <VBox styleClass="field-container">
+                    <Label styleClass="field-label" text="Media Type (Optional)"/>
+                    <HBox styleClass="media-type-container">
+                        <ToggleButton fx:id="linkToggle" styleClass="media-type-toggle" text="Link"/>
+                        <ToggleButton fx:id="imageToggle" styleClass="media-type-toggle" text="Images"/>
+                        <ToggleButton fx:id="videoToggle" styleClass="media-type-toggle" text="Video"/>
+                    </HBox>
+                </VBox>
+                <VBox fx:id="linkInputContainer" styleClass="field-container" managed="false" visible="false">
+                    <Label styleClass="field-label" text="Link URL"/>
+                    <TextField fx:id="linkField" styleClass="link-input" promptText="https://example.com"/>
+                    <Label fx:id="linkUrlErrorLabel" styleClass="error-message" managed="false" visible="false"/>
+                </VBox>
+                <VBox fx:id="mediaUploadContainer" styleClass="field-container" managed="false" visible="false">
+                    <Label fx:id="mediaLabel" styleClass="field-label" text="Media Files"/>
+                    <VBox fx:id="dragDropArea" styleClass="drag-drop-area" alignment="CENTER">
+                        <Label fx:id="dragDropText" styleClass="drag-drop-text" text="📸 Drag &amp; Drop Images Here"/>
+                        <Label styleClass="drag-drop-subtext" text="or"/>
+                        <Button fx:id="browseButton" styleClass="browse-button" text="Browse Files"
+                                onAction="#handleBrowseFiles"/>
+                    </VBox>
+                    <ScrollPane fx:id="mediaGridScroll" styleClass="media-grid-scroll" managed="false" visible="false"
+                                fitToWidth="true">
+                        <FlowPane fx:id="mediaGrid" styleClass="media-grid"/>
+                    </ScrollPane>
+                </VBox>
+                <Label fx:id="generalErrorLabel" styleClass="error-message" managed="false" visible="false"
+                       wrapText="true"/>
+            </VBox>
+        </ScrollPane>
+        <HBox styleClass="modal-footer">
+            <Button fx:id="resetButton" styleClass="reset-button" text="Reset" onAction="#handleReset"/>
+            <Button fx:id="saveButton" styleClass="save-button" text="Save Post" onAction="#handleSave"/>
+        </HBox>
+    </VBox>
+</AnchorPane>

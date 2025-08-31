@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane styleClass="posts-view-root" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" >
+    <top>
+        <VBox styleClass="top-container">
+            <HBox fx:id="topControlsBar" styleClass="top-controls-bar" alignment="CENTER_LEFT" spacing="200">
+
+                <FlowPane fx:id="activeFiltersPane" styleClass="active-filters-pane" prefHeight="62.0" prefWidth="750" minHeight="70" HBox.hgrow="ALWAYS" />
+
+                <HBox fx:id="searchActionContainer" styleClass="search-action-container" alignment="TOP_RIGHT" spacing="10">
+                    <HBox.margin>
+                        <Insets left="100.0" />
+                    </HBox.margin>
+                    <Button fx:id="addButton" styleClass="action-button" onAction="#handleAddNew" />
+                    <Button fx:id="historyButton" styleClass="action-button" onAction="#handleHistory" />
+                    <TextField fx:id="searchField" styleClass="search-field" />
+                </HBox>
+            </HBox>
+        </VBox>
+    </top>
+
+    <center>
+        <TableView fx:id="postsTableView" styleClass="posts-table-view" BorderPane.alignment="CENTER">
+            <columns>
+                <TableColumn fx:id="titleColumn" text="POST TITLE" />
+                <TableColumn fx:id="dateColumn" text="DATE" />
+                <TableColumn fx:id="platformColumn" text="PLATFORM" />
+                <TableColumn fx:id="statusColumn" text="STATUS" />
+                <TableColumn fx:id="actionsColumn" styleClass="actions-column" />
+            </columns>
+            <BorderPane.margin>
+                <Insets top="20.0" />
+            </BorderPane.margin>
+        </TableView>
+    </center>
+</BorderPane>

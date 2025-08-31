@@ -1,0 +1,412 @@
+.home-view-root {
+    -fx-background-color: #19191d;
+}
+
+.main-container {
+    -fx-background-color: transparent;
+}
+
+.left-section, .right-section {
+    -fx-min-width: 350px;
+}
+
+.status-container {
+    -fx-alignment: center-left;
+    -fx-pref-width: inherit;
+    -fx-max-width: Infinity;
+}
+
+.status-box {
+    -fx-background-radius: 12px;
+    -fx-min-height: 90px;
+    -fx-pref-width: inherit;
+    -fx-max-width: Infinity;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.15), 10, 0, 0, 2);
+}
+
+.status-icon-container {
+    -fx-background-radius: 50%;
+    -fx-min-width: 36px;
+    -fx-min-height: 36px;
+    -fx-max-width: 36px;
+    -fx-max-height: 36px;
+    -fx-alignment: center;
+}
+
+.status-icon {
+    -fx-scale-x: 1.2;
+    -fx-scale-y: 1.2;
+}
+
+.status-count {
+    -fx-text-fill: white;
+    -fx-font-family: "Inter Bold";
+    -fx-font-size: 28px;
+}
+
+.status-title {
+    -fx-text-fill: #a1a1aa;
+    -fx-font-family: "Inter Medium";
+    -fx-font-size: 13px;
+}
+
+
+.period-container {
+    -fx-padding: 10 0 0 0;
+}
+
+.period-button {
+    -fx-background-color: transparent;
+    -fx-text-fill: #716996;
+    -fx-font-family: "Inter SemiBold";
+    -fx-font-size: 12px;
+    -fx-min-width: 32px;
+    -fx-min-height: 32px;
+    -fx-max-width: 32px;
+    -fx-max-height: 32px;
+    -fx-background-radius: 50%;
+    -fx-border-radius: 50%;
+    -fx-border-color: #3a3a4a;
+    -fx-border-width: 1.5px;
+    -fx-cursor: hand;
+}
+
+.period-button:hover {
+    -fx-background-color: #2b2c4b;
+    -fx-text-fill: #a1a1aa;
+}
+
+.period-button:selected {
+    -fx-background-color: #56448e;
+    -fx-text-fill: white;
+    -fx-border-color: #56448e;
+}
+
+.chart-container {
+    -fx-background-color: rgba(43, 44, 75, 0.2);
+    -fx-background-radius: 16px;
+    -fx-padding: 20;
+    -fx-min-height: 280px;
+}
+
+.custom-chart {
+    -fx-background-color: transparent;
+}
+
+
+.calendar-posts-row {
+    -fx-min-height: 300px;
+    -fx-max-height: 300px;
+}
+
+.calendar-container {
+    -fx-background-color: #2b2c4b;
+    -fx-background-radius: 12px;
+    -fx-padding: 15;
+    -fx-min-width: 280px;
+    -fx-pref-width: 280px;
+    -fx-max-width: 280px;
+}
+
+.calendar-header {
+    -fx-padding: 0 0 10 0;
+}
+
+.calendar-nav-btn {
+    -fx-background-color: transparent;
+    -fx-min-width: 20px;
+    -fx-min-height: 20px;
+    -fx-max-width: 20px;
+    -fx-max-height: 20px;
+    -fx-cursor: hand;
+    -fx-background-radius: 4px;
+}
+
+.calendar-nav-btn:hover {
+    -fx-background-color: rgba(255, 255, 255, 0.1);
+}
+
+.calendar-month-year {
+    -fx-text-fill: white;
+    -fx-font-family: "Inter SemiBold";
+    -fx-font-size: 14px;
+    -fx-min-width: 140px;
+    -fx-alignment: center;
+}
+
+.calendar-grid {
+    -fx-background-color: transparent;
+}
+
+.calendar-day-header {
+    -fx-text-fill: #716996;
+    -fx-font-family: "Inter Medium";
+    -fx-font-size: 11px;
+    -fx-min-width: 28px;
+    -fx-alignment: center;
+}
+
+.calendar-day {
+    -fx-text-fill: #a1a1aa;
+    -fx-font-family: "Inter";
+    -fx-font-size: 12px;
+    -fx-min-width: 28px;
+    -fx-min-height: 28px;
+    -fx-alignment: center;
+    -fx-cursor: hand;
+    -fx-background-radius: 6px;
+}
+
+.calendar-day:hover {
+    -fx-background-color: rgba(86, 68, 142, 0.2);
+    -fx-text-fill: white;
+}
+
+.calendar-today {
+    -fx-background-color: rgba(30, 215, 96, 0.15);
+    -fx-text-fill: #1ED760;
+    -fx-font-family: "Inter SemiBold";
+}
+
+.calendar-selected {
+    -fx-background-color: #56448e;
+    -fx-text-fill: white;
+}
+
+.calendar-selected:hover {
+    -fx-background-color: #56448e !important;
+    -fx-text-fill: white !important;
+}
+
+.calendar-today:hover {
+    -fx-background-color: rgba(30, 215, 96, 0.15) !important;
+    -fx-text-fill: #1ED760 !important;
+}
+
+.today-posts-container {
+    -fx-background-color: transparent;
+    -fx-min-width: 150px;
+    -fx-min-height: 315px;
+    -fx-max-height: 315px
+}
+
+.today-posts-list {
+    -fx-background-color: transparent;
+    -fx-background-insets: 0;
+    -fx-padding: 0;
+}
+
+.today-posts-list .list-cell {
+    -fx-background-color: transparent;
+    -fx-padding: 0 0 8 0;
+}
+
+.today-posts-list .list-cell:filled:hover,
+.today-posts-list .list-cell:filled:selected {
+    -fx-background-color: transparent;
+}
+
+.today-post-cell {
+    -fx-background-color: #2b2c4b;
+    -fx-background-radius: 8px;
+    -fx-padding: 12;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 5, 0, 0, 1);
+}
+
+.today-post-cell:hover {
+    -fx-background-color: #323354;
+}
+
+.today-post-title {
+    -fx-text-fill: white;
+    -fx-font-family: "Inter Medium";
+    -fx-font-size: 13px;
+}
+
+.today-post-status {
+    -fx-font-family: "Inter";
+    -fx-font-size: 11px;
+    -fx-padding: 2 6;
+    -fx-background-radius: 10px;
+}
+
+.status-done {
+    -fx-text-fill: #1ED760;
+    -fx-background-color: rgba(30, 215, 96, 0.1);
+}
+
+.status-in_progress {
+    -fx-text-fill: #FBC02D;
+    -fx-background-color: rgba(251, 192, 45, 0.1);
+}
+
+.status-canceled {
+    -fx-text-fill: #FF6B6B;
+    -fx-background-color: rgba(255, 107, 107, 0.1);
+}
+
+.upcoming-events-container {
+    -fx-background-color: rgba(43, 44, 75, 0.3);
+    -fx-background-radius: 12px;
+    -fx-padding: 15;
+}
+
+.section-title {
+    -fx-text-fill: white;
+    -fx-font-family: "Inter SemiBold";
+    -fx-font-size: 15px;
+    -fx-padding: 0 0 5 0;
+}
+
+.upcoming-events-list {
+    -fx-background-color: transparent;
+    -fx-background-insets: 0;
+    -fx-padding: 0;
+}
+
+.upcoming-events-list .list-cell {
+    -fx-background-color: transparent;
+    -fx-padding: 0 0 10 0;
+}
+
+.upcoming-events-list .list-cell:filled:hover,
+.upcoming-events-list .list-cell:filled:selected {
+    -fx-background-color: transparent;
+}
+
+.event-cell {
+    -fx-padding: 8;
+    -fx-background-color: #2b2c4b;
+    -fx-background-radius: 8px;
+}
+
+.event-cell:hover {
+    -fx-background-color: #323354;
+}
+
+.event-date-box {
+    -fx-background-color: #56448e;
+    -fx-background-radius: 8px;
+    -fx-min-width: 45px;
+    -fx-min-height: 45px;
+    -fx-max-width: 45px;
+    -fx-max-height: 45px;
+    -fx-padding: 3 0;
+}
+
+.event-day {
+    -fx-text-fill: white;
+    -fx-font-family: "Inter Bold";
+    -fx-font-size: 16px;
+}
+
+.event-month {
+    -fx-text-fill: rgba(255, 255, 255, 0.7);
+    -fx-font-family: "Inter";
+    -fx-font-size: 10px;
+}
+
+.event-name {
+    -fx-text-fill: white;
+    -fx-font-family: "Inter Medium";
+    -fx-font-size: 13px;
+}
+
+.event-hashtag {
+    -fx-text-fill: #56448e;
+    -fx-font-family: "Inter";
+    -fx-font-size: 12px;
+}
+
+.list-view .scroll-bar:vertical {
+    -fx-pref-width: 0;
+    -fx-min-width: 0;
+    -fx-max-width: 0;
+    -fx-background-color: transparent;
+    -fx-background-insets: 0;
+    -fx-padding: 0;
+}
+
+.list-view .scroll-bar:horizontal {
+    -fx-pref-height: 0;
+    -fx-min-height: 0;
+    -fx-max-height: 0;
+    -fx-background-color: transparent;
+    -fx-background-insets: 0;
+    -fx-padding: 0;
+}
+
+.list-view .scroll-bar {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+    -fx-background-radius: 0;
+    -fx-border-radius: 0;
+    -fx-padding: 0;
+    -fx-background-insets: 0;
+    -fx-border-insets: 0;
+    -fx-pref-width: 0;
+    -fx-pref-height: 0;
+    -fx-min-width: 0;
+    -fx-min-height: 0;
+    -fx-max-width: 0;
+    -fx-max-height: 0;
+}
+
+.list-view .scroll-bar .track,
+.list-view .scroll-bar .thumb {
+    -fx-background-color: transparent;
+    -fx-pref-width: 0;
+    -fx-pref-height: 0;
+    -fx-min-width: 0;
+    -fx-min-height: 0;
+    -fx-max-width: 0;
+    -fx-max-height: 0;
+}
+
+.list-view .scroll-bar .increment-button,
+.list-view .scroll-bar .decrement-button {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+    -fx-pref-width: 0;
+    -fx-pref-height: 0;
+    -fx-min-width: 0;
+    -fx-min-height: 0;
+    -fx-max-width: 0;
+    -fx-max-height: 0;
+    -fx-padding: 0;
+    -fx-background-insets: 0;
+    -fx-border-insets: 0;
+    -fx-opacity: 0;
+    -fx-scale-x: 0;
+    -fx-scale-y: 0;
+}
+
+.list-view .scroll-bar .increment-arrow,
+.list-view .scroll-bar .decrement-arrow {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+    -fx-pref-width: 0;
+    -fx-pref-height: 0;
+    -fx-min-width: 0;
+    -fx-min-height: 0;
+    -fx-max-width: 0;
+    -fx-max-height: 0;
+    -fx-padding: 0;
+    -fx-background-insets: 0;
+    -fx-border-insets: 0;
+    -fx-opacity: 0;
+    -fx-scale-x: 0;
+    -fx-scale-y: 0;
+}
+
+.today-posts-list .list-cell:filled:hover,
+.today-posts-list .list-cell:filled:selected,
+.upcoming-events-list .list-cell:filled:hover,
+.upcoming-events-list .list-cell:filled:selected {
+    -fx-background-color: transparent !important;
+}
+
+.today-post-cell:hover,
+.event-cell:hover {
+    -fx-background-color: #2b2c4b !important;
+}

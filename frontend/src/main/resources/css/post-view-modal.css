@@ -1,0 +1,76 @@
+@import "post-create-edit-modal.css";
+
+.display-area, .display-area .content {
+    -fx-background-color: #19191d;
+    -fx-text-fill: #dbdee1;
+    -fx-font-family: "Inter Regular";
+    -fx-font-size: 15px;
+    -fx-background-radius: 8px;
+    -fx-border-width: 0px;
+    -fx-padding: 12 16;
+}
+
+.display-area-link {
+    -fx-background-color: #19191d;
+    -fx-text-fill: #65a7e6;
+    -fx-font-family: "Inter Regular";
+    -fx-font-size: 15px;
+    -fx-background-radius: 8px;
+    -fx-border-width: 0px;
+    -fx-padding: 12 16;
+    -fx-min-height: 44px;
+}
+
+.status-capsule {
+    -fx-background-radius: 20px;
+    -fx-padding: 6 14;
+    -fx-font-family: "Inter Bold";
+    -fx-font-size: 13px;
+    -fx-border-color: transparent;
+    -fx-border-width: 2px;
+    -fx-cursor: hand;
+    -fx-border-radius: 20px;
+}
+
+.status-capsule:hover {
+    -fx-background-color: #40444b;
+}
+
+.status-capsule.status-done {
+    -fx-text-fill: #1ED760;
+    -fx-background-color: rgba(30, 215, 96, 0.1);
+}
+
+.status-capsule.status-in-progress {
+    -fx-text-fill: #FBC02D;
+    -fx-background-color: rgba(251, 192, 45, 0.1);
+}
+
+.status-capsule.status-canceled {
+    -fx-text-fill: #FF6B6B;
+    -fx-background-color: rgba(255, 107, 107, 0.1);
+}
+
+.status-capsule:selected {
+    -fx-background-color: derive(-fx-background-color, 20%);
+    -fx-border-color: -fx-text-fill;
+
+    -fx-border-radius: 20px;
+
+}
+
+.media-context-menu {
+    -fx-background-color: #19191d;
+    -fx-background-radius: 4px;
+    -fx-border-color: #40444b;
+    -fx-border-width: 1px;
+}
+
+.media-context-menu .label {
+    -fx-text-fill: #dbdee1;
+    -fx-font-family: "Inter Medium";
+}
+
+.media-context-menu .menu-item:hover {
+    -fx-background-color: #35373c;
+}

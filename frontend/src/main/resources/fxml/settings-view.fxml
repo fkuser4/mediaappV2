@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" styleClass="settings-view-root">
+    <center>
+        <ScrollPane fx:id="scrollPane" styleClass="settings-scroll-pane" fitToWidth="true" fitToHeight="false">
+            <VBox fx:id="contentVBox" styleClass="settings-content" spacing="40">
+                <VBox styleClass="settings-section" spacing="20">
+                    <Label styleClass="section-title" text="Date Format"/>
+                    <VBox styleClass="option-group" spacing="15">
+                        <RadioButton fx:id="ddmmyyyyRadio" styleClass="settings-radio" text="DD/MM/YYYY" toggleGroup="$dateFormatGroup"/>
+                        <RadioButton fx:id="mmddyyyyRadio" styleClass="settings-radio" text="MM/DD/YYYY" toggleGroup="$dateFormatGroup"/>
+                    </VBox>
+                </VBox>
+                <VBox styleClass="settings-section" spacing="20">
+                    <VBox spacing="5" styleClass="section-header">
+                        <Label styleClass="section-title" text="Preferred Platforms"/>
+                        <Label styleClass="section-subtitle" text="Select the platforms you want to use for posting"/>
+                    </VBox>
+
+                    <VBox styleClass="platform-list" spacing="10">
+                        <HBox fx:id="facebookBox" styleClass="platform-box" onMouseClicked="#handleFacebookClick">
+                            <Label styleClass="platform-label" text="Facebook"/>
+                        </HBox>
+
+                        <HBox fx:id="xBox" styleClass="platform-box" onMouseClicked="#handleXClick">
+                            <Label styleClass="platform-label" text="X (Twitter)"/>
+                        </HBox>
+
+                        <HBox fx:id="instagramBox" styleClass="platform-box" onMouseClicked="#handleInstagramClick">
+                            <Label styleClass="platform-label" text="Instagram"/>
+                        </HBox>
+
+                        <HBox fx:id="tiktokBox" styleClass="platform-box" onMouseClicked="#handleTiktokClick">
+                            <Label styleClass="platform-label" text="TikTok"/>
+                        </HBox>
+
+                        <HBox fx:id="youtubeBox" styleClass="platform-box" onMouseClicked="#handleYoutubeClick">
+                            <Label styleClass="platform-label" text="YouTube"/>
+                        </HBox>
+                    </VBox>
+                </VBox>
+                <VBox styleClass="settings-section" spacing="15">
+                    <Label styleClass="section-title" text="Account"/>
+                    <HBox styleClass="account-item" spacing="15">
+                        <Label styleClass="account-label" text="Username:"/>
+                        <Label fx:id="usernameLabel" styleClass="account-value" text="Loading..."/>
+                    </HBox>
+                    <HBox styleClass="account-item" spacing="15">
+                        <Label styleClass="account-label" text="Email:"/>
+                        <Label fx:id="emailLabel" styleClass="account-value" text="Loading..."/>
+                    </HBox>
+                </VBox>
+
+                <Region VBox.vgrow="ALWAYS"/>
+
+                <HBox styleClass="logout-container">
+                    <Button fx:id="logoutButton" styleClass="logout-button" text="LOGOUT" onAction="#handleLogout"/>
+                    <Region HBox.hgrow="ALWAYS"/>
+                </HBox>
+            </VBox>
+        </ScrollPane>
+    </center>
+
+</BorderPane>

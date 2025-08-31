@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.canvas.Canvas?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.*?>
+
+<GridPane fx:id="gridPane" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+    <columnConstraints>
+        <ColumnConstraints hgrow="ALWAYS" minWidth="10.0" prefWidth="100.0"/>
+        <ColumnConstraints hgrow="ALWAYS" minWidth="10.0" prefWidth="100.0"/>
+    </columnConstraints>
+    <rowConstraints>
+        <RowConstraints vgrow="ALWAYS"/>
+    </rowConstraints>
+    <VBox fx:id="leftPanel" styleClass="left-panel" GridPane.columnIndex="0">
+        <ImageView fx:id="logoImageView"
+                   styleClass="logo"
+                   pickOnBounds="true"
+                   preserveRatio="true"
+                   fitWidth="140"
+                   fitHeight="140">
+            <VBox.margin><Insets left="20.0" top="20.0"/></VBox.margin>
+        </ImageView>
+        <VBox fx:id="loginFormContainer" styleClass="login-form-container">
+            <Label fx:id="loginTitle" text="Log in." styleClass="login-title"/>
+            <VBox fx:id="inputContainer" styleClass="input-container">
+                <TextField fx:id="usernameField" promptText="Username" styleClass="login-input, username-input"/>
+                <PasswordField fx:id="passwordField" promptText="Password" styleClass="login-input, password-input"/>
+            </VBox>
+            <Label fx:id="errorLabel" styleClass="error-label" managed="false" visible="false"/>
+            <HBox fx:id="optionsContainer" styleClass="options-container">
+                <CheckBox fx:id="rememberMeCheckBox" text="Remember Me" styleClass="remember-me-checkbox"/>
+                <Region HBox.hgrow="ALWAYS"/>
+                <Hyperlink fx:id="forgotPasswordLink" text="Forgot your password?" styleClass="forgot-password-link" onAction="#handleForgotPassword"/>
+            </HBox>
+            <Button fx:id="loginButton" text="LOGIN" styleClass="login-button" onAction="#handleLogin"/>
+        </VBox>
+    </VBox>
+    <StackPane fx:id="rightPanel" styleClass="right-panel" GridPane.columnIndex="1">
+        <Canvas fx:id="animationCanvas" styleClass="animation-canvas"/>
+    </StackPane>
+</GridPane>

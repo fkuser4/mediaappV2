@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<HBox fx:id="globalTopBar"
+      styleClass="window-controls-bar"
+      pickOnBounds="true"
+      StackPane.alignment="TOP_RIGHT"
+      prefHeight="50" maxHeight="50" minHeight="50" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+    <padding><Insets topRightBottomLeft="8"/></padding>
+
+    <Region fx:id="dragOverlay" HBox.hgrow="ALWAYS" prefHeight="32" maxHeight="32" />
+
+    <Button fx:id="minimizeButton" styleClass="window-control-button" onAction="#handleMinimize"/>
+    <Button fx:id="closeButton" styleClass="window-control-button" onAction="#handleClose"/>
+</HBox>

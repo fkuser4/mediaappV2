@@ -1,0 +1,195 @@
+#gridPane {
+    -fx-background-color: transparent;
+    -fx-spacing: 0;
+    -fx-hgap: 0;
+    -fx-vgap: 0;
+    -fx-border-color: transparent;
+    -fx-border-width: 0;
+}
+
+.left-panel {
+    -fx-background-color: #1f1f27;
+    -fx-min-width: 400;
+    -fx-pref-width: 400;
+    -fx-spacing: 0;
+}
+
+.right-panel {
+    -fx-background-color: #19191d;
+    -fx-min-width: 400;
+}
+
+.login-form-container {
+    -fx-padding: 140 100 0 100;
+    -fx-spacing: 0;
+    -fx-alignment: top-left;
+    -fx-fill-width: true;
+}
+
+.login-title {
+    -fx-text-fill: #ffffff;
+    -fx-font-size: 36px;
+    -fx-font-weight: bold;
+    -fx-font-family: "Inter";
+    -fx-padding: 0 0 30 0;
+}
+
+.input-container {
+    -fx-spacing: 0;
+    -fx-max-width: 300;
+    -fx-pref-width: 300;
+}
+
+.login-input {
+    -fx-background-color: #2b2c4b;
+    -fx-text-fill: #ffffff;
+    -fx-font-size: 12px;
+    -fx-font-family: "Arial";
+    -fx-prompt-text-fill: #716996;
+    -fx-max-width: 300;
+    -fx-pref-width: 300;
+    -fx-max-height: 45;
+    -fx-pref-height: 45;
+    -fx-padding: 10;
+    -fx-border-color: transparent;
+    -fx-focus-color: transparent;
+    -fx-faint-focus-color: transparent;
+}
+
+.username-input {
+    -fx-background-radius: 4 4 0 0;
+}
+
+.password-input {
+    -fx-background-radius: 0 0 4 4;
+}
+
+.error-label {
+    -fx-text-fill: #e74c3c;
+    -fx-font-size: 12px;
+    -fx-font-family: "Arial";
+    -fx-padding: 10 0 0 0;
+    -fx-wrap-text: true;
+    -fx-max-width: 300;
+}
+
+.options-container {
+    -fx-padding: 20 0 20 0;
+    -fx-spacing: 10;
+    -fx-alignment: center-left;
+    -fx-max-width: 300;
+}
+
+.remember-me-checkbox {
+    -fx-text-fill: #8d8aab;
+    -fx-font-size: 12px;
+    -fx-font-family: "Arial";
+    -fx-background-color: transparent;
+    -fx-cursor: hand;
+}
+
+.remember-me-checkbox .box {
+    -fx-border-color: #8d8aab;
+    -fx-background-color: transparent;
+    -fx-background-radius: 4;
+    -fx-border-radius: 4;
+    -fx-border-width: 1;
+}
+
+.remember-me-checkbox:selected .box {
+    -fx-background-color: #56448e;
+    -fx-border-color: #56448e;
+}
+
+.remember-me-checkbox:selected .mark {
+    -fx-background-color: #ffffff;
+}
+
+.forgot-password-link {
+    -fx-font-family: "Arial";
+    -fx-font-size: 12px;
+    -fx-underline: false;
+    -fx-focus-color: transparent;
+    -fx-faint-focus-color: transparent;
+    -fx-text-fill: #0096c9;
+    -fx-cursor: hand;
+}
+
+.forgot-password-link:hover {
+    -fx-underline: true;
+}
+
+.forgot-password-link:visited {
+    -fx-text-fill: #0096c9;
+}
+
+.login-button {
+    -fx-background-color: #56448e;
+    -fx-text-fill: #ffffff;
+    -fx-font-size: 14px;
+    -fx-font-family: "Arial";
+    -fx-font-weight: bold;
+    -fx-max-width: 170;
+    -fx-pref-width: 170;
+    -fx-min-height: 45;
+    -fx-background-radius: 4;
+    -fx-cursor: hand;
+    -fx-margin: 30 0 0 0;
+}
+
+.login-button:hover {
+    -fx-background-color: #654f9e;
+    -fx-effect: dropshadow(three-pass-box, rgba(86, 68, 142, 0.3), 5, 0, 0, 2);
+}
+
+.login-button:pressed {
+    -fx-background-color: #46337a;
+    -fx-scale-x: 0.99;
+    -fx-scale-y: 0.99;
+}
+
+.login-button:disabled {
+    -fx-background-color: #3a3a3a;
+    -fx-text-fill: #666666;
+    -fx-cursor: default;
+}
+
+.animation-canvas {
+    -fx-background-color: transparent;
+}
+
+.draggable-area {
+    -fx-background-color: transparent;
+    -fx-cursor: move;
+}
+
+.scroll-bar:horizontal,
+.scroll-bar:vertical {
+    -fx-background-color: transparent;
+}
+
+.scroll-bar .track {
+    -fx-background-color: transparent;
+}
+
+.globalTopBar {
+    -fx-background-color: transparent;
+}
+
+.scroll-bar .thumb {
+    -fx-background-color: #56448e;
+    -fx-background-radius: 4;
+}
+
+.scroll-bar .thumb:hover {
+    -fx-background-color: #654f9e;
+}
+
+.text-field:focused,
+.password-field:focused,
+.button:focused,
+.check-box:focused,
+.hyperlink:focused {
+    -fx-focus-color: transparent;
+    -fx-faint-focus-color: transparent;
+}

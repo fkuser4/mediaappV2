@@ -1,0 +1,28 @@
+#globalTopBar {
+    -fx-background-color: transparent;
+
+    -fx-padding: 4px 15px 4px 0;
+    -fx-alignment: center-right;
+    -fx-spacing: 5px;
+}
+
+.window-control-button {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+    -fx-cursor: hand;
+    -fx-background-radius: 4px;
+
+    -fx-min-width: 32px;
+    -fx-max-width: 32px;
+    -fx-min-height: 32px;
+    -fx-max-height: 32px;
+}
+
+.window-control-button .styled-button-svg {
+    -fx-fill: #afaeb4;
+    -fx-shape: null;
+}
+
+#minimizeButton:hover .styled-button-svg {
+    -fx-fill: #FFFFFF;
+}

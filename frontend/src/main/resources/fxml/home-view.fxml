@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane styleClass="home-view-root" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+    <center>
+        <GridPane styleClass="main-container" hgap="30">
+            <columnConstraints>
+                <ColumnConstraints percentWidth="50.0" hgrow="SOMETIMES" />
+                <ColumnConstraints percentWidth="50.0" hgrow="SOMETIMES" />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+            </rowConstraints>
+            <VBox styleClass="left-section" spacing="20" GridPane.columnIndex="0" prefWidth="0">
+                <HBox fx:id="statusBoxContainer" spacing="15" styleClass="status-container" HBox.hgrow="ALWAYS"/>
+                <HBox fx:id="periodButtonContainer" styleClass="period-container" alignment="CENTER_LEFT"/>
+                <StackPane fx:id="chartContainer" styleClass="chart-container" VBox.vgrow="ALWAYS">
+                    <VBox.margin>
+                        <Insets top="10"/>
+                    </VBox.margin>
+                </StackPane>
+            </VBox>
+            <VBox styleClass="right-section" spacing="45" GridPane.columnIndex="1" prefWidth="0">
+                <HBox spacing="20" styleClass="calendar-posts-row">
+                    <VBox styleClass="calendar-container" spacing="10">
+                        <HBox styleClass="calendar-header" alignment="CENTER" spacing="10">
+                            <Button fx:id="calendarPrevBtn" styleClass="calendar-nav-btn"/>
+                            <Label fx:id="calendarMonthYear" styleClass="calendar-month-year"/>
+                            <Button fx:id="calendarNextBtn" styleClass="calendar-nav-btn"/>
+                        </HBox>
+                        <GridPane fx:id="calendarGrid" styleClass="calendar-grid" hgap="8" vgap="8" alignment="CENTER">
+                            <padding>
+                                <Insets top="5" right="10" bottom="10" left="10"/>
+                            </padding>
+                        </GridPane>
+                    </VBox>
+                    <VBox fx:id="todayPostsContainer" styleClass="today-posts-container" spacing="5" HBox.hgrow="ALWAYS">
+                        <Label fx:id="todayDateLabel" styleClass="section-title"/>
+                        <ListView fx:id="todayPostsList" styleClass="today-posts-list" VBox.vgrow="ALWAYS"/>
+                    </VBox>
+                </HBox>
+                <VBox fx:id="upcomingEventsContainer" styleClass="upcoming-events-container"
+                      spacing="10" VBox.vgrow="ALWAYS">
+                    <Label text="Upcoming Events" styleClass="section-title"/>
+                    <ListView fx:id="upcomingEventsList" styleClass="upcoming-events-list" VBox.vgrow="ALWAYS"/>
+                </VBox>
+            </VBox>
+        </GridPane>
+    </center>
+</BorderPane>

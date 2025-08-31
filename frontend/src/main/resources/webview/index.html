@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Social Media Preview</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div id="initial-message">
+    <div class="message-content">
+        <h1>Select a post to preview</h1>
+    </div>
+</div>
+<div class="preview-container" id="post-preview-wrapper" style="display: none;">
+    <div class="platform-tabs">
+        <button class="tab-button active" data-platform="twitter">𝕏</button>
+        <button class="tab-button" data-platform="instagram">Instagram</button>
+        <button class="tab-button" data-platform="facebook">Facebook</button>
+        <button class="tab-button" data-platform="youtube">YouTube</button>
+        <button class="tab-button" data-platform="tiktok">TikTok</button>
+    </div>
+    <div class="preview-panels">
+        <div class="platform-preview active" id="twitter-preview">
+            <div class="x-post">
+                <div class="x-inner">
+                    <div class="x-avatar" id="twitterAvatar"></div>
+                    <div class="x-main">
+                        <div class="x-header">
+                            <div class="x-names">
+                                <span class="x-display-name" id="twitterDisplayName"></span>
+                                <svg class="verified-badge" style="display: none;" width="20" height="20" viewBox="0 0 22 22"><path fill="#1d9bf0" d="M20.396 11c-.018-.646-.215-1.275-.57-1.816-.354-.54-.852-.972-1.438-1.246.223-.607.27-1.264.14-1.897-.131-.634-.437-1.218-.882-1.687-.47-.445-1.053-.75-1.687-.882-.633-.13-1.29-.083-1.897.14-.273-.587-.704-1.086-1.245-1.44S11.647 1.62 11 1.604c-.646.017-1.273.213-1.813.568s-.969.854-1.24 1.44c-.608-.223-1.267-.272-1.902-.14-.635.13-1.22.436-1.69.882-.445.47-.749 1.055-.878 1.688-.13.633-.08 1.29.144 1.896-.587.274-1.087.705-1.443 1.245-.356.54-.555 1.17-.574 1.817.02.647.218 1.276.574 1.817.356.54.856.972 1.443 1.245-.224.606-.274 1.263-.144 1.896.13.634.433 1.218.877 1.688.47.443 1.054.747 1.687.878.633.132 1.29.084 1.897-.136.274.586.705 1.084 1.246 1.439.54.354 1.17.551 1.816.569.647-.016 1.276-.213 1.817-.567s.972-.854 1.245-1.44c.604.239 1.266.296 1.903.164.636-.132 1.22-.447 1.68-.907.46-.46.776-1.044.908-1.681s.075-1.299-.165-1.903c.586-.274 1.084-.705 1.439-1.246.354-.54.551-1.17.569-1.816zM9.662 14.85l-3.429-3.428 1.293-1.302 2.072 2.072 4.4-4.794 1.347 1.246z"/></svg>
+                                <div class="x-username-time">
+                                    <span id="twitterUsername"></span><span style="margin: 0 4px;">·</span><span>2h</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="x-text" id="twitterText"></div>
+                        <div class="x-media" id="twitterMedia"></div>
+                        <div class="x-actions">
+                            <div class="x-action reply">
+                                <svg viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M1.751 10c0-4.42 3.584-8 8.005-8h4.366c4.49 0 8.129 3.64 8.129 8.13 0 2.96-1.607 5.68-4.196 7.11l-8.054 4.46v-3.69h-.067c-4.49.1-8.183-3.51-8.183-8.01zm8.005-6c-3.317 0-6.005 2.69-6.005 6 0 3.37 2.77 6.08 6.138 6.01l.351-.01h1.761v2.3l5.087-2.81c1.951-1.08 3.163-3.13 3.163-5.36 0-3.39-2.744-6.13-6.129-6.13H9.756z"></path>
+                                </svg>
+                                <span id="twitterComments">56</span>
+                            </div>
+                            <div class="x-action repost">
+                                <svg viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M4.5 3.88l4.432 4.14-1.364 1.46L5.5 7.55V16c0 1.1.896 2 2 2H13v2H7.5c-2.209 0-4-1.79-4-4V7.55L1.432 9.48.068 8.02 4.5 3.88zM16.5 6H11V4h5.5c2.209 0 4 1.79 4 4v8.45l2.068-1.93 1.364 1.46-4.432 4.14-4.432-4.14 1.364-1.46 2.068 1.93V8c0-1.1-.896-2-2-2z"></path>
+                                </svg>
+                                <span id="twitterShares">12</span>
+                            </div>
+                            <div class="x-action like">
+                                <svg viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M16.697 5.5c-1.222-.06-2.679.51-3.89 2.16l-.805 1.09-.806-1.09C9.984 6.01 8.526 5.44 7.304 5.5c-1.243.07-2.349.78-2.91 1.91-.552 1.12-.633 2.78.479 4.82 1.074 1.97 3.257 4.27 7.129 6.61 3.87-2.34 6.052-4.64 7.126-6.61 1.111-2.04 1.03-3.7.477-4.82-.561-1.13-1.666-1.84-2.908-1.91z"></path>
+                                </svg>
+                                <span id="twitterLikes">1,234</span>
+                            </div>
+                            <div class="x-action">
+                                <svg viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M12 2.59l5.7 5.7-1.41 1.42L13 6.41V16h-2V6.41l-3.3 3.3-1.41-1.42L12 2.59zM21 15l-.02 3.51c0 1.38-1.12 2.49-2.5 2.49H5.5C4.11 21 3 19.88 3 18.5V15h2v3.5c0 .28.22.5.5.5h12.98c.28 0 .5-.22.5-.5L19 15h2z"></path>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="platform-preview" id="instagram-preview">
+            <div class="instagram-post">
+                <div class="ig-header">
+                    <div class="ig-avatar-wrapper">
+                        <div class="ig-avatar" id="instagramAvatar"></div>
+                    </div>
+                    <div class="ig-header-text">
+                        <div class="ig-username">
+                            <span id="instagramUsername">johndoe</span>
+                            <svg class="verified-badge instagram" style="display: none;" width="12" height="12" viewBox="0 0 40 40" fill="#0095f6">
+                                <path d="M19.998 3.094 14.638 0l-2.972 5.15H5.432v6.354L0 14.64 3.094 20 0 25.359l5.432 3.137v5.905h5.975L14.638 40l5.36-3.094L25.358 40l3.232-5.6h6.162v-6.01L40 25.359 36.905 20 40 14.641l-5.248-3.03v-6.46h-6.419L25.358 0l-5.36 3.094Zm7.415 11.225 2.254 2.287-11.43 11.5-6.835-6.93 2.244-2.258 4.587 4.581 9.18-9.18Z"/>
+                            </svg>
+                        </div>
+                        <div class="ig-location">Location</div>
+                    </div>
+                    <div style="padding: 8px 12px; cursor: pointer;">
+                        <svg width="24" height="24" viewBox="0 0 24 24">
+                            <circle cx="12" cy="12" r="1.5" fill="#262626"/>
+                            <circle cx="6" cy="12" r="1.5" fill="#262626"/>
+                            <circle cx="18" cy="12" r="1.5" fill="#262626"/>
+                        </svg>
+                    </div>
+                </div>
+                <div class="ig-media" id="instagramMedia">
+                    <img src="https://picsum.photos/400/400?random=1" alt="Post image">
+                </div>
+                <div class="ig-engagement">
+                    <div class="ig-buttons">
+                        <button class="ig-button">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <path d="M16.792 3.904A4.989 4.989 0 0121.5 9.122c0 3.072-2.652 4.959-5.197 7.222-2.512 2.243-3.865 3.469-4.303 3.752-.477-.309-2.143-1.823-4.303-3.752C5.141 14.072 2.5 12.167 2.5 9.122a4.989 4.989 0 014.708-5.218 4.21 4.21 0 013.675 1.941c.84 1.175.98 1.763 1.12 1.763s.278-.588 1.11-1.766a4.17 4.17 0 013.679-1.938m0-2a6.04 6.04 0 00-4.797 2.127 6.052 6.052 0 00-4.787-2.127A6.985 6.985 0 00.5 9.122c0 3.61 2.55 5.827 5.015 7.97.283.246.569.494.853.747l1.027.918a44.998 44.998 0 003.518 3.018 2 2 0 002.174 0 45.263 45.263 0 003.626-3.115l.922-.824c.293-.26.59-.519.885-.774 2.334-2.025 4.98-4.32 4.98-7.94a6.985 6.985 0 00-6.708-7.218z" fill="#262626"/>
+                            </svg>
+                        </button>
+                        <button class="ig-button">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <path d="M20.656 17.008a9.993 9.993 0 10-3.59 3.615L22 22z" fill="none" stroke="#262626" stroke-linejoin="round" stroke-width="2"/>
+                            </svg>
+                        </button>
+                        <button class="ig-button">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <line fill="none" stroke="#262626" stroke-linejoin="round" stroke-width="2" x1="22" x2="9.218" y1="3" y2="10.083"/>
+                                <polygon fill="none" points="11.698 20.334 22 3.001 2 3.001 9.218 10.084 11.698 20.334" stroke="#262626" stroke-linejoin="round" stroke-width="2"/>
+                            </svg>
+                        </button>
+                        <button class="ig-button save">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <polygon fill="none" points="20 21 12 13.44 4 21 4 3 20 3 20 21" stroke="#262626" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="ig-likes" id="instagramLikes">1,234 likes</div>
+                    <div class="ig-caption">
+                        <span class="ig-caption-user" id="instagramCaptionUser">johndoe</span>
+                        <span id="instagramCaption">Loading...</span>
+                    </div>
+                    <div class="ig-comments-link" id="instagramCommentsLink">View all 56 comments</div>
+                    <div class="ig-time">2 HOURS AGO</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="platform-preview" id="facebook-preview">
+            <div class="facebook-post">
+                <div class="fb-header">
+                    <div class="fb-avatar" id="facebookAvatar"></div>
+                    <div class="fb-header-text">
+                        <div class="fb-author">
+                            <span id="facebookDisplayName">John Doe</span>
+                            <svg class="verified-badge facebook" style="display: none;" width="16" height="16" viewBox="0 0 24 24" fill="#1877f2">
+                                <path d="M22.25 12c0-1.43-.88-2.67-2.19-3.34.46-1.39.2-2.9-.81-3.91s-2.52-1.27-3.91-.81c-.66-1.31-1.91-2.19-3.34-2.19s-2.67.88-3.33 2.19c-1.4-.46-2.91-.2-3.92.81s-1.26 2.52-.8 3.91c-1.31.67-2.2 1.91-2.2 3.34s.89 2.67 2.2 3.34c-.46 1.39-.21 2.9.8 3.91s2.52 1.27 3.91.81c.67 1.31 1.91 2.19 3.34 2.19s2.68-.88 3.34-2.19c1.39.46 2.9.2 3.91-.81s1.27-2.52.81-3.91c1.31-.67 2.19-1.91 2.19-3.34zm-11.71 4.2L6.8 12.46l1.41-1.42 2.26 2.26 4.8-5.23 1.47 1.36-6.2 6.77z"/>
+                            </svg>
+                        </div>
+                        <div class="fb-meta">
+                            <span>2 hours ago</span>
+                            <span style="margin: 0 4px;">·</span>
+                            <svg width="12" height="12" viewBox="0 0 12 12" fill="#65676b">
+                                <path d="M6 0a6 6 0 110 12A6 6 0 016 0zm0 11a5 5 0 100-10 5 5 0 000 10z"/>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+                <div class="fb-content" id="facebookContent">Loading...</div>
+                <div class="fb-media" id="facebookMedia"></div>
+                <div class="fb-stats">
+                    <div class="fb-reactions">
+                        <div class="fb-reaction-icons">
+                            <div class="fb-reaction like"></div>
+                            <div class="fb-reaction love"></div>
+                            <div class="fb-reaction wow"></div>
+                        </div>
+                        <span id="facebookLikes">1,234</span>
+                    </div>
+                    <div>
+                        <span id="facebookCommentsShares">56 comments · 12 shares</span>
+                    </div>
+                </div>
+                <div class="fb-actions">
+                    <div class="fb-action">
+                        <svg viewBox="0 0 20 20" fill="currentColor">
+                            <path d="M7.493 18.75c-.425 0-.82-.236-.975-.632A7.48 7.48 0 016 15.375c0-1.75.599-3.358 1.602-4.634.151-.192.373-.309.6-.397.473-.183.89-.514 1.212-.924a9.042 9.042 0 012.861-2.4c.723-.384 1.35-.956 1.653-1.715a4.498 4.498 0 00.322-1.672V3a.75.75 0 01.75-.75 2.25 2.25 0 012.25 2.25c0 1.152-.26 2.243-.723 3.218-.266.558-.107 1.282.725 1.282h3.126c1.026 0 1.945.694 2.054 1.715.045.422.068.85.068 1.285a11.95 11.95 0 01-2.649 7.521c-.388.482-.987.729-1.605.729H14.23c-.483 0-.964-.078-1.423-.23l-3.114-1.04a4.501 4.501 0 00-1.423-.23h-.777z"/>
+                        </svg>
+                        <span>Like</span>
+                    </div>
+                    <div class="fb-action">
+                        <svg viewBox="0 0 20 20" fill="currentColor">
+                            <path d="M7.5 3.375c0-1.036.84-1.875 1.875-1.875h.375a3.75 3.75 0 013.75 3.75v1.875C13.5 8.161 14.34 9 15.375 9h1.875A3.75 3.75 0 0121 12.75v3.375C21 17.16 20.16 18 19.125 18h-9.75A1.875 1.875 0 017.5 16.125V3.375z"/>
+                        </svg>
+                        <span>Comment</span>
+                    </div>
+                    <div class="fb-action">
+                        <svg viewBox="0 0 20 20" fill="currentColor">
+                            <path d="M15.75 4.5a3 3 0 11.825 2.066l-8.421 4.679a3.002 3.002 0 010 1.51l8.421 4.679a3 3 0 11-.729 1.31l-8.421-4.678a3 3 0 110-4.132L15.021 5.79a3 3 0 01.729-1.29z"/>
+                        </svg>
+                        <span>Share</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="platform-preview" id="youtube-preview">
+            <div class="youtube-video">
+                <div class="yt-thumbnail" id="youtubeMedia">
+                    <img src="https://picsum.photos/640/360?random=1" alt="YouTube thumbnail">
+                    <div class="yt-play-button">
+                        <svg viewBox="0 0 68 48">
+                            <path d="M66.52,7.74c-0.78-2.93-2.49-5.41-5.42-6.19C55.79,.13,34,0,34,0S12.21,.13,6.9,1.55 C3.97,2.33,2.27,4.81,1.48,7.74C0.06,13.05,0,24,0,24s0.06,10.95,1.48,16.26c0.78,2.93,2.49,5.41,5.42,6.19 C12.21,47.87,34,48,34,48s21.79-0.13,27.1-1.55c2.93-0.78,4.64-3.26,5.42-6.19C67.94,34.95,68,24,68,24S67.94,13.05,66.52,7.74z" fill="#f00"/>
+                            <path d="M 45,24 27,14 27,34" fill="#fff"/>
+                        </svg>
+                    </div>
+                    <span class="yt-duration">2:34</span>
+                </div>
+                <div class="yt-details">
+                    <div class="yt-channel-avatar" id="youtubeAvatar"></div>
+                    <div class="yt-info">
+                        <div class="yt-title" id="youtubeTitle">Loading...</div>
+                        <div class="yt-channel">
+                            <span id="youtubeChannelName">John Doe</span>
+                            <svg class="verified-badge youtube" style="display: none;" width="14" height="14" viewBox="0 0 24 24" fill="#606060">
+                                <path d="M22.25 12c0-1.43-.88-2.67-2.19-3.34.46-1.39.2-2.9-.81-3.91s-2.52-1.27-3.91-.81c-.66-1.31-1.91-2.19-3.34-2.19s-2.67.88-3.33 2.19c-1.4-.46-2.91-.2-3.92.81s-1.26 2.52-.8 3.91c-1.31.67-2.2 1.91-2.2 3.34s.89 2.67 2.2 3.34c-.46 1.39-.21 2.9.8 3.91s2.52 1.27 3.91.81c.67 1.31 1.91 2.19 3.34 2.19s2.68-.88 3.34-2.19c1.39.46 2.9.2 3.91-.81s1.27-2.52.81-3.91c1.31-.67 2.19-1.91 2.19-3.34zm-11.71 4.2L6.8 12.46l1.41-1.42 2.26 2.26 4.8-5.23 1.47 1.36-6.2 6.77z"/>
+                            </svg>
+                        </div>
+                        <div class="yt-views" id="youtubeViews">10,000 views • 2 hours ago</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="platform-preview" id="tiktok-preview">
+            <div class="tiktok-video">
+                <div class="tt-video-container" id="tiktokMedia">
+                </div>
+
+                <div class="tt-sidebar">
+                    <div class="tt-avatar-btn">
+                        <div class="tt-avatar" id="tiktokAvatar"></div>
+                        <div class="tt-follow">+</div>
+                    </div>
+                    <div class="tt-action">
+                        <svg class="tt-action-icon" viewBox="0 0 48 48" fill="white"><path d="M34.6 6.1c5.7 0 10.4 5.2 10.4 11.5 0 6.8-5.9 11-11.5 16S25 41.3 24 41.9c-1.1-.7-4.7-4-9.5-8.3-5.7-5-11.5-9.2-11.5-16C3 11.3 7.7 6.1 13.4 6.1c4.2 0 6.5 2 8.1 4.3 1.9 2.6 2.2 3.9 2.5 3.9.3 0 .6-1.3 2.5-3.9 1.6-2.3 3.9-4.3 8.1-4.3z"/></svg>
+                        <span class="tt-count" id="tiktokLikes"></span>
+                    </div>
+                    <div class="tt-action">
+                        <svg class="tt-action-icon" viewBox="0 0 48 48" fill="white"><path d="M47.5 46.1l-2.8-11c1.8-3.3 2.8-7.1 2.8-11.1C47.5 11 37 .5 24 .5S.5 11 .5 24 11 47.5 24 47.5c4 0 7.8-1 11.1-2.8l11 2.8c.8.2 1.6-.6 1.4-1.4zm-3-22.1c0 4-1 7.8-2.6 11.2l-1.1 2.4 2.2 8.7-8.7-2.2-2.4 1.1c-3.4 1.6-7.2 2.6-11.2 2.6-11.2 0-20.2-9.1-20.2-20.3S12.8 6.2 24 6.2 44.5 15.3 44.5 24z"/></svg>
+                        <span class="tt-count" id="tiktokComments"></span>
+                    </div>
+                    <div class="tt-action">
+                        <svg class="tt-action-icon" viewBox="0 0 48 48" fill="white"><path d="M36.537 39.89c-5.23 3.482-11.662 5.51-18.537 5.51C8.059 45.4.4 37.741.4 28.8c0-8.942 7.659-16.6 16.6-16.6 6.875 0 13.307 2.028 18.537 5.51L33.97 20.2c-4.149-2.761-9.078-4.4-14.37-4.4-7.264 0-13.4 6.136-13.4 13.4s6.136 13.4 13.4 13.4c5.292 0 10.221-1.639 14.37-4.4l1.567 2.49z"/></svg>
+                        <span class="tt-count" id="tiktokShares"></span>
+                    </div>
+                </div>
+                <div class="tt-info">
+                    <div class="tt-username">
+                        @<span id="tiktokUsername"></span>
+                        <svg class="verified-badge tiktok" style="display: none;" width="16" height="16" viewBox="0 0 24 24" fill="#25f4ee"><path d="M22.25 12c0-1.43-.88-2.67-2.19-3.34.46-1.39.2-2.9-.81-3.91s-2.52-1.27-3.91-.81c-.66-1.31-1.91-2.19-3.34-2.19s-2.67.88-3.33 2.19c-1.4-.46-2.91-.2-3.92.81s-1.26 2.52-.8 3.91c-1.31.67-2.2 1.91-2.2 3.34s.89 2.67 2.2 3.34c-.46 1.39-.21 2.9.8 3.91s2.52 1.27 3.91.81c.67 1.31 1.91 2.19 3.34 2.19s2.68-.88 3.34-2.19c1.39.46 2.9.2 3.91-.81s1.27-2.52.81-3.91c1.31-.67 2.19-1.91 2.19-3.34zm-11.71 4.2L6.8 12.46l1.41-1.42 2.26 2.26 4.8-5.23 1.47 1.36-6.2 6.77z"/></svg>
+                    </div>
+                    <div class="tt-caption" id="tiktokCaption"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="link-preview-template" style="display: none;">
+    <div class="link-preview">
+        <div class="link-preview-image"></div>
+        <div class="link-preview-content">
+            <div class="link-preview-domain">example.com</div>
+            <div class="link-preview-title">This is a Placeholder Link Title</div>
+            <div class="link-preview-description">This is a placeholder description for the link preview to show how it looks.</div>
+        </div>
+    </div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>

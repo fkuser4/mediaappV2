@@ -1,0 +1,52 @@
+@import "post-create-edit-modal.css";
+
+.split-pane > .split-pane-divider {
+    -fx-background-color: #40444b;
+    -fx-padding: 0 1 0 1;
+}
+
+.list-view {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+}
+
+.list-cell {
+    -fx-background-color: transparent;
+    -fx-padding: 0 0 8px 0;
+}
+
+.list-cell:empty {
+    -fx-padding: 0;
+}
+
+
+.list-item-container {
+    -fx-background-color: #19191d;
+    -fx-border-color: #40444b;
+    -fx-border-width: 1px;
+    -fx-border-radius: 4px;
+    -fx-padding: 18px 16px;
+}
+
+.list-item-label {
+    -fx-text-fill: #b5bac1;
+    -fx-font-family: "Inter Medium";
+    -fx-font-size: 14px;
+}
+
+.list-cell:hover .list-item-label {
+    -fx-text-fill: white;
+}
+
+.list-cell:selected .list-item-container {
+    -fx-border-color: #654f9e;
+}
+
+.list-cell:selected .list-item-label {
+    -fx-text-fill: white;
+    -fx-font-family: "Inter Bold";
+}
+
+.list-view:focused {
+    -fx-background-insets: 0;
+}
