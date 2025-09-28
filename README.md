@@ -41,3 +41,20 @@ Database Access
 Configuration
 
 Copy .env.example to .env and configure your environment variables.
+
+## Screenshots
+
+### Login 
+<img width="712" height="433" alt="image" src="https://github.com/user-attachments/assets/113cf988-2120-4d5b-a3dc-f7041cb1a0ef" />
+
+### Dashboard
+<img width="714" height="434" alt="image" src="https://github.com/user-attachments/assets/8d207e4a-8ead-4340-8ecd-52ed6216a0b1" />
+
+### Post preview
+<img width="710" height="432" alt="image" src="https://github.com/user-attachments/assets/86f4191e-9513-4151-95ba-d76aa7e38223" />
+
+### Posts view
+<img width="706" height="430" alt="image" src="https://github.com/user-attachments/assets/2599e530-2fee-48fd-b336-f1868cdf8432" />
+
+### Settings
+<img width="712" height="433" alt="image" src="https://github.com/user-attachments/assets/22c0471a-5cbf-491c-ac46-205cb38d641a" />
