@@ -1,6 +1,6 @@
 # MediaApp
 
-A full-stack Java application with Spring Boot backend and JavaFX frontend for media management.
+A full-stack Java application with **Spring Boot backend and JavaFX** frontend for social media content management.
 
 ## Project Structure
 - `backend/` - Spring Boot REST API server
